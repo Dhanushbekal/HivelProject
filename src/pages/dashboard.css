@@ -1,0 +1,172 @@
+/* Flex container for the dashboard */
+.dashboard-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Light gray background */
+  }
+  
+  
+ 
+.chart-wrapper {
+    position: relative; 
+  }
+  
+  
+  .pagination-buttons {
+    position: absolute;
+    top: 50%;
+    left: 10px; 
+    right: 10px; 
+    transform: translateY(-50%); 
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 20px); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+  }
+  
+  
+  .chart-wrapper:hover .pagination-buttons {
+    opacity: 1; 
+  }
+  
+  
+  .pagination-buttons button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  
+ 
+  .pagination-buttons button:hover {
+    background-color: rgba(255, 255, 255, 1); 
+  }
+  
+  /* Disabled button style */
+  .pagination-buttons button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; /* Reduced opacity for a passive look */
+  }
+  
+  /* Make sure disabled button is still visible */
+  .pagination-buttons button:disabled:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Ensure no hover effect on disabled */
+  }
+  
+  /* Optional: For better accessibility */
+  .pagination-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    padding: 8px;
+    font-size: 14px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  .suggestions-dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .suggestion-item {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .search-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .year-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .year-filter label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #year-select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #year-select:hover {
+    border-color: #007bff;
+    background-color: #fff;
+  }
+  
+  #year-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  #year-select option {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  
